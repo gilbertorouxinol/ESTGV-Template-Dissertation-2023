@@ -1,0 +1,74 @@
+%Polytechnic Institute of Viseu
+%School of Technology and Management of Viseu
+%File Template Dissertation Created by Gilberto Rouxinol on 2023
+%https://www.overleaf.com/
+%Copyright © https://ctan.org
+%Copyright © MIT License 2023 Gilberto Rouxinol
+
+
+%Texto
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+
+%Texto cor
+\usepackage{xcolor}
+
+%Bibliografia
+\usepackage[backend=biber, style=numeric, sorting=ynt]{biblatex}
+\addbibresource{G_RefBiblio.bib}
+\usepackage{csquotes}
+
+%Configuração da página
+\usepackage[a4paper,left=3.0cm,right=3.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+
+%Alinhar equações
+\usepackage{amsmath}
+
+%Fontes ou símbolos matemáticos
+\usepackage{amssymb}
+
+%Referências de figuras
+\usepackage{graphicx}
+
+%Colocar subfiguras
+\usepackage{caption}
+\usepackage{subcaption}
+
+%Escrever unidades do SI
+\usepackage{siunitx}
+
+%Acrescentar pdfs
+\usepackage{pdfpages}
+
+%Paginação
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\thepage}
+
+%Criar os níveis de profundidade de subsubsubsection e de subsubsubsubsection
+\setcounter{secnumdepth}{5}
+\makeatletter
+\newcommand\subsubsubsection{\@startsection{paragraph}{4}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}}
+\newcommand\subsubsubsubsection{\@startsection{subparagraph}{5}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}}
+\makeatother
+
+%Indicar o nível de profundidade do índice geral
+\setcounter{tocdepth}{5}
+
+%Renomear o nome por defeito de secções padrão
+\addto\captionsportuguese{\renewcommand{\contentsname}{ÍNDICE GERAL}}
+\addto\captionsportuguese{\renewcommand{\listfigurename}{ÍNDICE DE FIGURAS}}
+\addto\captionsportuguese{\renewcommand{\listtablename}{ÍNDICE DE TABELAS}}
+
+%Contemplar o nome de secções não padrão no índice geral
+\addcontentsline{toc}{section}{ÍNDICE DE TABELAS}
+\addcontentsline{toc}{section}{ÍNDICE DE FIGURAS}
+\addcontentsline{toc}{section}{LISTA DE SIGLAS/ABREVIATURAS}
+\addcontentsline{toc}{section}{LISTA DE SÍMBOLOS}
+
+%Colocar a numeração da secção à esquerda da numeração das equações, tabelas e figuras
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}

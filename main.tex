@@ -1,0 +1,77 @@
+\documentclass[10pt]{article}
+
+\input{packageConfig}
+
+\title{\textcolor{blue}{A capa e a contracapa (modelo em pdf) devem ser inseridos antes da primeira página do trabalho}}
+\author{\textcolor{blue}{retirar esta página depois}}
+\date{ }
+
+\begin{document}
+\maketitle %Comentar esta linha para retirar esta página
+\pagenumbering{roman}
+
+\newpage
+\section*{DEDICATÓRIA}
+\textcolor{blue}{Opcional}\\ %apagar esta informação
+\input{A_Dedicatoria}
+
+\newpage
+\section*{AGRADECIMENTOS}
+\input{B_Agradecimentos}
+
+\newpage
+\section*{RESUMO}
+\input{C_Resumo}
+
+\newpage
+\section*{ABSTRACT}
+\input{D_Abstract}
+
+\newpage
+\tableofcontents
+
+\newpage
+\listoftables
+
+\newpage
+\listoffigures
+
+\newpage
+\section*{LISTA DE SIGLAS/ABREVIATURAS}
+\input{E_SiglasAbrevia}
+
+\newpage
+\section*{LISTA DE SÍMBOLOS}
+\input{E_Simbolos}
+
+\newpage
+\pagenumbering{arabic}
+\section{NOME DO CAPÍTULO 1}
+\input{F_Capitulo_1}
+
+\newpage
+\section{NOME DO CAPÍTULO 2}   
+\input{F_Capitulo_2}
+
+\newpage
+\section{NOME DO CAPÍTULO 3}
+\input{F_Capitulo_3}
+
+\newpage
+\section{NOME DO CAPÍTULO 4}
+\input{F_Capitulo_4}
+
+%Comentar as 3 linhas seguintes para retirar esta página
+\newpage
+\centering{\textcolor{blue}{Sugere-se utilizar um gestor de referências bibliográficas automático, apresenta-se a seguir um exemplo}}\\
+\centering{\small{\textcolor{blue}{retirar esta página depois}}}
+
+\newpage
+\printbibliography[heading=bibintoc,title={REFERÊNCIAS BIBLIOGRÁFICAS}]
+
+\newpage
+\input{H_Apendices}
+
+\newpage
+\input{I_Anexos}
+\end{document}
